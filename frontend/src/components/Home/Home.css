@@ -1,0 +1,50 @@
+.Home {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    width: auto;
+    height: 100px;
+}
+
+.hero {
+    display: flex;
+    width: 100vw;
+    height: 200px;
+    background: radial-gradient(farthest-corner at top left, #0a52b0, #9198e5 50%);
+}
+
+.enterLousycord {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(to right, #ab07ab, #9198e5);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.enterLousycord:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+.enterLousycord:focus {
+    outline: 2px solid #9198e5;
+    outline-offset: 4px;
+}
