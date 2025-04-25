@@ -40,7 +40,7 @@ func auth(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Authorized")
 		return
 	} else {
-		http.Error(w, fmt.Sprintf("Bad credentials"), http.StatusBadRequest)
+		http.Error(w, fmt.Sprintf("Bad credentials"), http.StatusUnauthorized)
 		return
 	}
 }
