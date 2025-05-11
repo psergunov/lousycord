@@ -32,6 +32,10 @@ dist-ssr
 .env
 .env*.local
 
+# Certificates
+
+*.pem
+
 # eslint cache
 .eslintcache
 
