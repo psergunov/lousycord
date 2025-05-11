@@ -7,8 +7,7 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-func createPostgresDB(ctx context.Context) (*pgxpool.Pool, error) {
-	connStr := "postgres://myuser:mypassword@db:5432/mydb?sslmode=disable"
+func createPostgresDB(ctx context.Context, connStr string) (*pgxpool.Pool, error) {
 	dbpool, err := pgxpool.New(context.Background(), connStr)
 	if err != nil {
 		return nil, err
