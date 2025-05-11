@@ -7,7 +7,7 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-func createPostgresDB(ctx context.Context, connStr string) (*pgxpool.Pool, error) {
+func CreatePostgresDB(ctx context.Context, connStr string) (*pgxpool.Pool, error) {
 	dbpool, err := pgxpool.New(context.Background(), connStr)
 	if err != nil {
 		return nil, err
@@ -18,7 +18,7 @@ func createPostgresDB(ctx context.Context, connStr string) (*pgxpool.Pool, error
 //go:embed queries/up.sql
 var upQuery string
 
-func createTables(ctx context.Context, pool *pgxpool.Pool) error {
+func CreateTables(ctx context.Context, pool *pgxpool.Pool) error {
 	_, err := pool.Exec(ctx, upQuery)
 	return err
 }
